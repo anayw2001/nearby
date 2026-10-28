@@ -16,8 +16,10 @@
 
 COMPILED_PROTO_PATH="compiled_proto"
 
-${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} internal/proto/analytics/connections_log.proto
-${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} internal/proto/analytics/fast_pair_log.proto
-${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} sharing/proto/analytics/nearby_sharing_log.proto
-${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} proto/fast_pair_enums.proto
+${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} connections/implementation/proto/offline_wire_formats.proto
+${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} internal/proto/credential.proto
+${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} internal/proto/local_credential.proto
+${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} proto/errorcode/error_code_enums.proto
+${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} proto/mediums/multiplex_frames.proto
+${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} proto/connections_enums.proto
 ${PROTOC} --cpp_out=${COMPILED_PROTO_PATH} proto/sharing_enums.proto
